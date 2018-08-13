@@ -1,0 +1,13 @@
+{
+  "name": "@watch-fail/lib",
+  "version": "0.0.1",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "npm run build-ts",
+    "build-ts": "../../node_modules/.bin/rimraf dist && ../../node_modules/.bin/tsc",
+    "watch": "npm run watch-ts",
+    "watch-ts": "../../node_modules/.bin/rimraf dist && ../../node_modules/.bin/tsc-watch -p . --onFailure \"echo Beep! Compilation Failed\""
+  },
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts"
+}
